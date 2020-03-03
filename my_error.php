@@ -1,13 +1,9 @@
 <?php
 function countDown($number) {
 	if ($number>10 || $number<0) {
-		throw new Exception("Error! Something went wrong...");
+		error_log ("Error! Something went wrong...", 3, "error.log");
 	}
 }
-}
-try {
-	countDown(7);
-} catch(Exception $exception) {
-	echo $exception->getMessage();
-}
+
+countDown(11);
 ?>
